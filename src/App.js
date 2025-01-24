@@ -26,7 +26,7 @@ function App() {
         : { username, email, password }; // Signup requires username, email, and password
 
       // Send a POST request to the server with the payload
-      const response = await axios.post(`https://solid-space-garbanzo-5gxw5xw6pgvw3v7rr-5000.app.github.dev${endpoint}`, payload);
+      const response = await axios.post(`https://manually-b3ef.onrender.com${endpoint}`, payload);
 
       // If successful, store the returned token in local storage and update the state
       localStorage.setItem('token', response.data.token);
@@ -46,7 +46,7 @@ function App() {
   const fetchProtectedData = async () => {
     try {
       // Send a GET request with the token in the Authorization header
-      const response = await axios.get('https://solid-space-garbanzo-5gxw5xw6pgvw3v7rr-5000.app.github.dev/protected', {
+      const response = await axios.get('https://manually-b3ef.onrender.com/protected', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
