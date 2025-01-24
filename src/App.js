@@ -37,7 +37,7 @@ function App() {
       toast(message);
     } catch (error) {
       // Handle errors and display an error message
-      setMessage(error.response ? .data ? .message || 'Operation failed');
+      setMessage(error.response?.data?.message || 'Operation failed');
       toast(message);
     }
   };
